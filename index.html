@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Berlin.rb</title>
-    <meta name="description" content="Berlin.rb is coming soon.">
+    <meta name="description" content="Berlin.rb is a new, regular meetup for Berlin's Ruby community. Talks, project show-and-tells, and casual get-togethers. Free and open to everyone.">
     <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
     <!-- Privacy-friendly analytics by Plausible -->
     <script async src="https://stats.paolino.me/js/pa-qYMtzApqYH7-B10ozGrEh.js"></script>
@@ -14,23 +14,106 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <main>
-      <div class="mark">
-        <img class="logo" src="assets/logo.svg" alt="Berlin.rb">
-      </div>
+      <section class="hero">
+        <div class="intro">
+          <h1 class="mark"><img class="logo" src="assets/logo.svg" alt="Berlin.rb"></h1>
+          <p class="lead">A new, regular meetup for Berlin&rsquo;s Ruby community. Talks, project show-and-tells, and casual get-togethers. Free and open to everyone.</p>
+          <div class="actions">
+            <a class="button" href="https://luma.com/berlinrb">Follow us on Luma</a>
+            <p class="hint">Get notified when the next meetup is scheduled.</p>
+          </div>
+        </div>
 
-      <section class="panel" aria-labelledby="title">
-        <h1 id="title">Coming soon.</h1>
-        <p>A new space for Ruby developers in Berlin. Meetups, talks, and practical conversations are on the way.</p>
+        <div class="events" id="events" aria-labelledby="events-title">
+          <h2 class="eyebrow" id="events-title">Upcoming meetups</h2>
+          <div class="calendar">
+            <iframe
+              src="https://luma.com/embed/calendar/cal-21caVAhECUCuGR6/events"
+              title="Berlin.rb events calendar on Luma"
+              loading="lazy"
+              allowfullscreen=""
+              aria-hidden="false"
+              tabindex="0"
+            ></iframe>
+          </div>
+        </div>
       </section>
 
-      <div class="footer">
+      <section id="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title">FAQ</h2>
+        <div class="faq">
+          <details>
+            <summary>What is Berlin.rb?</summary>
+            <div class="answer">
+              <p>Berlin.rb is a new, regular meetup for people who work with or are interested in Ruby, based in Berlin. We host talks, project show-and-tells, and casual get-togethers for the local Ruby community.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Who are the organizers?</summary>
+            <div class="answer">
+              <p>Berlin.rb is organized by:</p>
+              <ul class="organizers">
+                <li><a href="https://paolino.me">Carmine Paolino</a></li>
+                <li><a href="https://www.linkedin.com/in/riko-tertsch-2579772/">Riko Tertsch</a></li>
+                <li><a href="https://manuelmeurer.com">Manuel Meurer</a></li>
+                <li><a href="https://www.linkedin.com/in/viktorianer">Viktor Schmidt</a></li>
+                <li><a href="https://www.linkedin.com/in/nplusp/">Mikita Pridorozhko</a></li>
+                <li><a href="https://fractaledmind.com">Stephen Margheim</a></li>
+                <li>Olga Borzenko</li>
+                <li><a href="https://chikahirotokoro.com">Chikahiro Tokoro</a></li>
+                <li><a href="https://www.linkedin.com/in/leonentrup/">Leon Entrup</a></li>
+                <li><a href="https://www.linkedin.com/in/emmvs/">Emma Rünzel</a></li>
+              </ul>
+            </div>
+          </details>
+
+          <details>
+            <summary>Why another Berlin Ruby meetup?</summary>
+            <div class="answer">
+              <p>Berlin already has a great, long-running official Ruby User Group, and we&rsquo;re big fans of what they do. But Berlin&rsquo;s Ruby community is large, and we believe the city can support more regular Ruby events again. With Berlin.rb, we want to create more opportunities for people working with (or simply curious about) Ruby to meet up, give talks, share what they&rsquo;re building, and spend time together.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>How can I attend?</summary>
+            <div class="answer">
+              <p>Our meetups are free and open to anyone interested in Ruby, regardless of experience level.</p>
+              <p>We use Luma to manage our meetups. Follow our <a href="https://luma.com/berlinrb">Luma calendar</a> to be notified when a meetup is scheduled.</p>
+              <p>We aim to choose wheelchair accessible venues for our meetups. If a meetup&rsquo;s accessibility isn&rsquo;t mentioned in the description, just reach out beforehand and we&rsquo;ll do what we can to make sure you&rsquo;re accommodated.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>How can I speak?</summary>
+            <div class="answer">
+              <p>We&rsquo;re always looking for speakers, whether it&rsquo;s a deep technical talk, a lightning talk about something you built, or a &ldquo;lessons learned&rdquo; story. Reach out to <a href="mailto:hello@berlinrb.org">hello@berlinrb.org</a> with a short pitch (a sentence or two is enough) and we&rsquo;ll get back to you.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Can I / my company host or sponsor a meetup?</summary>
+            <div class="answer">
+              <p>Yes, and we&rsquo;d love to hear from you! We&rsquo;re always looking for companies to:</p>
+              <ul>
+                <li><strong>Host:</strong> provide a space for an evening meetup (talks + mingling).</li>
+                <li><strong>Sponsor:</strong> support food, drinks, swag, or other costs, which helps us keep Berlin.rb free and welcoming for everyone.</li>
+              </ul>
+              <p>Get in touch at <a href="mailto:hello@berlinrb.org">hello@berlinrb.org</a> if you&rsquo;re interested in either.</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <footer class="footer">
         <a href="mailto:hello@berlinrb.org">hello@berlinrb.org</a>
-      </div>
+        <a href="https://luma.com/berlinrb">Luma calendar</a>
+      </footer>
     </main>
   </body>
 </html>
