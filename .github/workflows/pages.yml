@@ -23,6 +23,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+      - name: Build the press kit zip
+        run: |
+          mkdir -p build/berlinrb-press-kit
+          cp assets/logo.svg assets/logo.png \
+             assets/logo-dark.svg assets/logo-dark.png \
+             assets/logo-square.png press/about-berlinrb.txt \
+             build/berlinrb-press-kit/
+          (cd build && zip -qr ../press/berlinrb-press-kit.zip berlinrb-press-kit)
+          rm -rf build
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .
