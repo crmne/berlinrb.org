@@ -22,6 +22,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # sitemap lastmod comes from each page's last commit
       - uses: actions/configure-pages@v5
       - name: Build the press kit zip
         run: |
@@ -32,6 +34,18 @@ jobs:
              build/berlinrb-press-kit/
           (cd build && zip -qr ../press/berlinrb-press-kit.zip berlinrb-press-kit)
           rm -rf build
+      - name: Build the sitemap
+        run: |
+          {
+            echo '<?xml version="1.0" encoding="UTF-8"?>'
+            echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+            for page in index.html press/index.html; do
+              printf '  <url><loc>https://berlinrb.org/%s</loc><lastmod>%s</lastmod></url>\n' \
+                "${page%index.html}" "$(git log -1 --format=%cs -- "$page")"
+            done
+            echo '</urlset>'
+          } > sitemap.xml
+          cat sitemap.xml
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .
