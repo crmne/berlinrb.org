@@ -157,6 +157,43 @@ a:hover {
   border: 0;
 }
 
+/* Community network */
+
+.network {
+  border-bottom: 1px solid var(--line);
+  padding: clamp(28px, 4vw, 40px) 0;
+}
+
+.ruby-europe-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(20px, 4vw, 40px);
+  padding: 8px 0;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.ruby-europe-banner:focus-visible {
+  outline: 3px solid rgba(199, 22, 43, 0.3);
+  outline-offset: 4px;
+}
+
+.ruby-europe-label {
+  flex: none;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.ruby-europe-banner img {
+  display: block;
+  width: min(42vw, 360px);
+  height: auto;
+}
+
 /* FAQ */
 
 #faq {
@@ -322,6 +359,15 @@ a:hover {
 
   .calendar iframe {
     height: 420px;
+  }
+
+  .ruby-europe-banner {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .ruby-europe-banner img {
+    width: min(100%, 300px);
   }
 }
 
